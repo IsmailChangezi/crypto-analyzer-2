@@ -1,12 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import App from '../App';
-import store from '../redux/configureStore';
-import '@testing-library/jest-dom';
+import { render, screen } from "@testing-library/react";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import App from "../App";
+import store from "../redux/configureStore";
+import "@testing-library/jest-dom";
 
-test('renders learn react link', () => {
+test("renders learn react link", () => {
   render(
     <React.StrictMode>
       <BrowserRouter>
@@ -14,8 +14,8 @@ test('renders learn react link', () => {
           <App />
         </Provider>
       </BrowserRouter>
-    </React.StrictMode>,
+    </React.StrictMode>
   );
-  const linkElement = screen.getByText('Crypto Analyzer');
+  const linkElement = screen.getByText("Crypto Analyzer");
   expect(linkElement).toBeInTheDocument();
 });
